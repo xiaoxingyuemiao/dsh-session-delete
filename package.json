@@ -1,0 +1,43 @@
+{
+  "name": "dsh-session-delete",
+  "version": "1.0.0",
+  "description": "DSH 会话删除插件：在会话行的「…」菜单里加一个浅红色「删除」按钮，点击后弹窗二次确认，确认后把该会话移入回收站（可恢复），并清理工作区成员、置顶、归档与投影缓存记录。",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "immediately": true
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "check": "node scripts/check.mjs"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "session",
+    "delete",
+    "trash",
+    "回收站"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}

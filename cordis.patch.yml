@@ -1,0 +1,12 @@
+# dsh-session-delete —— DSH 插件包挂载声明
+#
+# DSH 启动时按 bundle 层叠加各插件的 patch；本文件把插件行插入 Web profile 的配置树，
+# 使 Host 半边（lib/index.js）随 profile 一起加载，从而注册 /dsh-session-delete/api/* 路由。
+#
+# 安装方式（本目录即包根目录）：
+#   dsh plugin --profile desktop add link:D:/DSH插件/dsh-session-delete
+#   dsh plugin --profile web     add link:D:/DSH插件/dsh-session-delete
+
+- insert:
+    - id: dsh-session-delete
+      name: dsh-session-delete
