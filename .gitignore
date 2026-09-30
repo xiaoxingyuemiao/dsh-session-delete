@@ -1,0 +1,14 @@
+# Dependencies / build output
+node_modules/
+pnpm-lock.yaml
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Local scratch
+*.log
+*.tmp
